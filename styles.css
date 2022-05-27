@@ -13,7 +13,7 @@ font-family: Century Gothic;
 }
 .in-flex{
   flex: 1;
-  min-width: 300;
+  max-width: 300px;
 }
 .in-flex:first-child{
 flex: 2;
@@ -21,6 +21,10 @@ padding: 25px;
 margin: 20px;
 margin-bottom: 0px;
 
+}
+.center{
+
+  flex-direction: column;
 }
 
 html {
@@ -32,7 +36,7 @@ html {
     font-size: 6rem;
   }
   img {
-    
+    flex-direction: column;
     margin:auto;
   }
 
@@ -352,46 +356,4 @@ font-size: 2em;
         
       }
 
-      @media(max-width:500px){
-        header{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          }
-          .button{
-            display: inline-block;
-            text-decoration: none;
-            color: rgba(0, 0, 0, 0.979);
-            padding: 7px;
-            border-radius: 6px;
-            position: relative;
-            overflow: hidden;
-          }
-          .button::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 500%;
-            height: 200%;
-            background: linear-gradient(115deg,blue,purple,pink,rgb(250, 249, 249));
-            background-size: 20% 100%;
-            border-radius: inherit;
-          }
-          .button span{
-            display: block;
-            background:linear-gradient(250deg,rgb(232, 214, 226),rgb(255, 255, 255));
-            padding: 5px 15px;
-            border-radius: px;
-            position:relative ;
-            z-index: 2;
-            }
-
-            .habilidad{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-
-            }
-
-      }
+     
