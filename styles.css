@@ -1,8 +1,31 @@
 
 
+*{
+padding: 0px;
+margin: 0px;
+font-family: Century Gothic;
+
+}
+.home{
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.in-flex{
+  flex: 1;
+  min-width: 300;
+}
+.in-flex:first-child{
+flex: 2;
+padding: 25px;
+margin: 20px;
+margin-bottom: 0px;
+
+}
+
 html {
     
-    background:linear-gradient(100deg,rgb(238, 239, 239),rgb(168, 180, 170));
+    background:rgb(168, 180, 170);
   }
   label {
     padding-right: 200px;
@@ -48,12 +71,63 @@ justify-content: center;
 align-items: center;
 }
 footer{
-  
-  
+  padding: 20px;
   display: flex;
-justify-content: space-evenly;
+justify-content:center;
 align-items: center;
 }
+.progressj {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-valuej {
+  animation: loadj 3s normal forwards;
+  box-shadow: 0 10px 40px -10px rgb(255, 173, 12);
+  border-radius: 100px;
+  background:linear-gradient(150deg,rgb(239, 10, 10),rgb(66, 8, 224));
+  height: 30px;
+  width: 0;
+}
+
+@keyframes loadj {
+  0% { width: 0; }
+  100% { width: 30%; }
+}
+.progressc {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-valuec {
+  animation: loadc 3s normal forwards;
+  box-shadow: 0 10px 40px -10px rgb(234, 36, 224);
+  border-radius: 100px;
+  background: rgb(86, 7, 139);
+  height: 30px;
+  width: 0;
+}
+
+@keyframes loadc {
+  0% { width: 0; }
+  100% { width: 30%; }
+}
+
+
 .progress {
   background: rgba(255,255,255,0.1);
   justify-content: flex-start;
@@ -194,7 +268,7 @@ font-size: 2em;
   
 }
 .wrapper2{
-  height: 20vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,3 +323,75 @@ font-size: 2em;
       }
       
     }
+    .wrapper4{
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      .typing-demo4{
+      width: 100ch;
+      animation:typing4 18s steps(22), blink4 100s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: monospace;
+      font-size: 2em;
+      }
+      @keyframes typing4 {
+        from{
+          width: 0;
+        }
+        
+      }
+      
+      @keyframes blink4 {
+        0%{
+          border-color: transparent;
+        }
+        
+      }
+
+      @media(max-width:500px){
+        header{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          }
+          .button{
+            display: inline-block;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.979);
+            padding: 7px;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+          }
+          .button::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 500%;
+            height: 200%;
+            background: linear-gradient(115deg,blue,purple,pink,rgb(250, 249, 249));
+            background-size: 20% 100%;
+            border-radius: inherit;
+          }
+          .button span{
+            display: block;
+            background:linear-gradient(250deg,rgb(232, 214, 226),rgb(255, 255, 255));
+            padding: 5px 15px;
+            border-radius: px;
+            position:relative ;
+            z-index: 2;
+            }
+
+            .habilidad{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+            }
+
+      }
